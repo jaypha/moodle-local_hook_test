@@ -27,22 +27,22 @@ defined('MOODLE_INTERNAL') || die();
 $callbacks = [
     [
         'hook' => core_backup\hook\after_restore_root_define_settings::class,
-        'callback' => [\local_hook_test\backup\restore_extension_callbacks::class, 'extend_settings'],
+        'callback' => '\local_hook_test\backup\restore_extension_callbacks::extend_settings',
         'priority' => 500,
     ],
     [
         'hook' => core_backup\hook\after_copy_form_definition::class,
-        'callback' => [\local_hook_test\backup\restore_extension_callbacks::class, 'extend_copy_form'],
+        'callback' => '\local_hook_test\backup\restore_extension_callbacks::extend_copy_form',
         'priority' => 500,
     ],
     [
         'hook' => core_backup\hook\before_copy_course_execute::class,
-        'callback' => [\local_hook_test\backup\restore_extension_callbacks::class, 'before_copy_execute'],
+        'callback' => '\local_hook_test\backup\restore_extension_callbacks::before_copy_execute',
         'priority' => 500,
     ],
     [
         'hook' => core_backup\hook\copy_helper_process_formdata::class,
-        'callback' => [\local_hook_test\backup\restore_extension_callbacks::class, 'copy_helper_process_formdata'],
+        'callback' => '\local_hook_test\backup\restore_extension_callbacks::copy_helper_process_formdata',
         'priority' => 500,
     ],
 ];

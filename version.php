@@ -25,9 +25,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version  = 2024110700;   // The (date) version of this plugin
-$plugin->requires = 2024100700;   // Requires this Moodle version
+$plugin->requires = 2022112800;   // Requires this Moodle version
 
-$plugin->supported = [405, 405];     // Available as of Moodle 3.9.0 or later.
+$plugin->supported = [401, 405];     // Available as of Moodle 3.9.0 or later.
 // TODO $plugin->incompatible = ;  // Available as of Moodle 3.9.0 or later.
 
 $plugin->component = 'local_hook_test';
