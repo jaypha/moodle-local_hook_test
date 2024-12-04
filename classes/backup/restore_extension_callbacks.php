@@ -57,8 +57,8 @@ class restore_extension_callbacks {
     public static function extend_copy_form(after_copy_form_definition $hook) {
         // Add an element 'somebox' to the copy course form.
         $mform = $hook->mform;
-        $mform->addElement('checkbox', 'somebox','Some box');
-        $mform->addHelpButton('somebox', 'justif');
+        $mform->addElement('advcheckbox', 'somebox',get_string('somebox', 'local_hook_test'));
+        $mform->addHelpButton('somebox', 'somebox', 'local_hook_test');
     }
 
     /**

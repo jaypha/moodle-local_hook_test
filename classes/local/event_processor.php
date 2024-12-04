@@ -34,7 +34,7 @@ class event_processor {
     public static function process_course_restored(course_restored $event) {
         $settings = $event->get_data()['other']['settings'];
         // Check that the value of 'somebox' is present and mtrace it's value.
-        if (isset($settings['somebox'])) {
+        if (isset($settings['somebox']) && !PHPUNIT_TEST) {
             mtrace('Inside event_processor::process_course_restored()');
             mtrace('Somebox value is ' . $settings['somebox']->get_value());
         }

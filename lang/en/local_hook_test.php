@@ -25,3 +25,6 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Hook test';
+
+$string['somebox'] = 'Some box';
+$string['somebox_help'] = 'Some box help.';
